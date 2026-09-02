@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall</title>
+    <link rel="stylesheet" href="AASHA.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <input type="checkbox" id="alert-toggle">
+    <input type="checkbox" id="all-menu-toggle">
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <video class="logo-video" autoplay loop muted playsinline>
+                    <source src="Logo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="address border">
+                <p class="first">Monitoring</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="second"><b>North East</b></p>
+                </div>
+            </div>
+            <div class="search">
+                <select class="select">
+                    <option>All</option>
+                    <option>Risk Zones</option>
+                    <option>Alerts</option>
+                    <option>Roads</option>
+                </select>
+                <input placeholder="Search risk zones, roads, alerts..." class="input">
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <a href="AccountsAndAlerts.html" class="sign-in border" style="text-decoration:none;color:white;">
+                <p><span>Hello, Authority</span></p>
+                <p class="opt">Account & Alerts</p>
+            </a>
+            <a href="ReportsAndStatus.html" class="return border" style="text-decoration:none;color:white;">
+                <p><span>Reports &</span></p>
+                <p class="opt">Status</p>
+            </a>
+            <label for="alert-toggle" class="cart border alert-label">
+                <i class="fa-solid fa-bell"></i>
+                <p>Alerts</p>
+            </label>
+        </div>
+        <div class="panel">
+            <label for="all-menu-toggle" class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </label>
+            <div class="panel-ops">
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="HighRiskZones.html">High Risk Zones</a>
+                <a href="RoadConnectivity.html">Road Connectivity</a>
+                <a href="RainfallData.html">Rainfall Data</a>
+                <a href="UploadReport.html">Upload Report</a>
+            </div>
+            <a href="Settings.html" class="other border" style="text-decoration:none;color:white;">
+                <i class="fa-solid fa-gear"></i>
+                <p>Settings</p>
+            </a>
+        </div>
+    </header>
+
+    <div class="all-menu-panel">
+        <div class="all-menu-header">
+            <span><i class="fa-solid fa-bars"></i> All Categories</span>
+            <label for="all-menu-toggle"><i class="fa-solid fa-xmark"></i></label>
+        </div>
+    
+        <div class="all-menu-links">
+            <a href="Dashboard.html"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+            <a href="HighRiskZones.html"><i class="fa-solid fa-triangle-exclamation"></i> High Risk Zones</a>
+            <a href="RoadConnectivity.html"><i class="fa-solid fa-road"></i> Road Connectivity</a>
+            <a href="RainfallData.html"><i class="fa-solid fa-cloud-rain"></i> Rainfall Data</a>
+            <a href="UploadReport.html"><i class="fa-solid fa-upload"></i> Upload Report</a>
+    
+            <div class="all-menu-divider"></div>
+    
+            <a href="AccountsAndAlerts.html"><i class="fa-solid fa-user"></i> Account & Alerts</a>
+            <a href="ReportsAndStatus.html"><i class="fa-solid fa-file-lines"></i> Reports & Status</a>
+            <a href="Settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        </div>
+    </div>
+
+    <div class="alert-panel">
+        <div class="alert-panel-header">
+            <span><i class="fa-solid fa-bell"></i> Recent Alerts</span>
+            <label for="alert-toggle"><i class="fa-solid fa-xmark"></i></label>
+        </div>
+        <div class="alert-item">
+            <div class="alert-title">Heavy Rainfall Warning</div>
+            <div class="alert-meta">Arunachal Pradesh · 1 hr ago</div>
+            <span class="alert-level level-medium">MEDIUM</span>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <h1><i class="fa-solid fa-cloud-rain"></i> Rainfall Data</h1>
+        <p class="subtitle">Recent rainfall observations across North Eastern states (last 24–48 hours).</p>
+
+        <div class="content-card">
+            <h2>Rainfall Summary (Last 24 hrs)</h2>
+            <table class="data-table">
+                <tr>
+                    <th>State / Station</th>
+                    <th>Rainfall (mm)</th>
+                    <th>Category</th>
+                    <th>Updated</th>
+                    <th>Time Zone</th>
+                </tr>
+                <tr>
+                    <td>Cherrapunji (Meghalaya)</td>
+                    <td>142 mm</td>
+                    <td><span class="status-badge badge-red">Very Heavy</span></td>
+                    <td>01 Sep 2026, 08:30</td>
+                    <td>IST (UTC+5:30)</td>
+                </tr>
+                <tr>
+                    <td>Tawang (Arunachal)</td>
+                    <td>98 mm</td>
+                    <td><span class="status-badge badge-orange">Heavy</span></td>
+                    <td>01 Sep 2026, 07:45</td>
+                    <td>IST (UTC+5:30)</td>
+                </tr>
+                <tr>
+                    <td>Jorhat (Assam)</td>
+                    <td>67 mm</td>
+                    <td><span class="status-badge badge-orange">Heavy</span></td>
+                    <td>01 Sep 2026, 09:15</td>
+                    <td>IST (UTC+5:30)</td>
+                </tr>
+                <tr>
+                    <td>Imphal (Manipur)</td>
+                    <td>34 mm</td>
+                    <td><span class="status-badge badge-blue">Moderate</span></td>
+                    <td>01 Sep 2026, 08:00</td>
+                    <td>IST (UTC+5:30)</td>
+                </tr>
+                <tr>
+                    <td>Kohima (Nagaland)</td>
+                    <td>28 mm</td>
+                    <td><span class="status-badge badge-blue">Moderate</span></td>
+                    <td>31 Aug 2026, 18:20</td>
+                    <td>IST (UTC+5:30)</td>
+                </tr>
+                <tr>
+                    <td>Agartala (Tripura)</td>
+                    <td>12 mm</td>
+                    <td><span class="status-badge badge-green">Light</span></td>
+                    <td>31 Aug 2026, 16:50</td>
+                    <td>IST (UTC+5:30)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h2>Advisory</h2>
+            <ul>
+                <li>Very heavy rainfall in Meghalaya increases landslide probability in East Khasi Hills.</li>
+                <li>Heavy rain in Arunachal Pradesh – monitor Tawang sector closely.</li>
+                <li>Data is for demonstration purposes only (frontend placeholder).</li>
+            </ul>
+        </div>
+
+        <a href="Dashboard.html" class="back-link">← Back to Dashboard</a>
+    </div>
+
+    <footer class="footer">
+        <p>AASHA- A Ray Of Hope &nbsp;|&nbsp;
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="HighRiskZones.html">High Risk Zones</a>
+            <a href="RoadConnectivity.html">Road Connectivity</a>
+            <a href="RainfallData.html">Rainfall Data</a>
+            <a href="UploadReport.html">Upload Report</a>
+        </p>
+    </footer>
+</body>
+
+</html>
